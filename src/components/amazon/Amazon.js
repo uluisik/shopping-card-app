@@ -2,11 +2,11 @@ import React from "react";
 import "./Amazon.css";
 import list from "./AmazonData";
 import Card from "../card/Card";
-const Amazon = () => {
+const Amazon = ({ handleClick }) => {
   return (
     <section>
       {list.map((item) => {
-        <Card />;
+        return <Card key={item.id} item={item} handleClick={handleClick} />;
       })}
     </section>
   );
